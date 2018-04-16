@@ -9,7 +9,7 @@ describe Web::Controllers::Books::Create do
   end
 
   describe 'with valid params' do
-    let(:params) { Hash[book: {title: 'Confident Ruby', author: 'Avdi Grimm' } ] }
+    let(:params) { Hash[book: { title: 'Confident Ruby', author: 'Avdi Grimm' }] }
 
     it 'creates a new book' do
       action.call(params)
@@ -27,7 +27,7 @@ describe Web::Controllers::Books::Create do
   end
 
   describe 'with invalid params' do
-    let(:params) { Hash[book: {} ] }
+    let(:params) { Hash[book: {}] }
 
     it 'returns HTTP client error' do
       response = action.call(params)

@@ -1,7 +1,7 @@
 require_relative '../../../spec_helper'
 
 describe Web::Views::Books::New do
-  let(:params) { OpenStruct.new(valid?: false, error_messages: ['Title must be filled', 'Author must be filled'] ) }
+  let(:params) { OpenStruct.new(valid?: false, error_messages: ['Title must be filled', 'Author must be filled']) }
   let(:exposures) { Hash[params: params] }
   let(:template)  { Hanami::View::Template.new('apps/web/templates/books/new.html.erb') }
   let(:view)      { Web::Views::Books::New.new(template, exposures) }
